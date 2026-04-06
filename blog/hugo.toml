@@ -22,6 +22,10 @@ theme = "PaperMod"
     icon = "/avatar.png"
     iconHeight = 30
 
+  [[params.socialIcons]]
+    name = "x"
+    url = "https://x.com/Duetopid"
+
 
 [menu]
   [[menu.main]]
