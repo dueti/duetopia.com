@@ -1,11 +1,11 @@
 baseURL = "https://blog.duetopia.com/"
 languageCode = "zh-cn"
-title = "Duetopia Blog"
+title = "Duet"
 theme = "PaperMod"
 
 [params]
   env = "production"
-  title = "Duetopia Blog"
+  title = "Duet"
   description = "duet 的个人博客"
   author = "duet"
   ShowReadingTime = true
@@ -17,14 +17,14 @@ theme = "PaperMod"
   defaultTheme = "auto"
   favicon = "/favicon.png"
 
-  [params.profileMode]
-    enabled = true
-    title = "duet"
-    subtitle = "记录想法，分享生活"
-    imageUrl = "/avatar.png"
-    imageTitle = "duet"
-    imageWidth = 120
-    imageHeight = 120
+  [params.label]
+    text = "Duet"
+    icon = "/avatar.png"
+    iconHeight = 30
+
+  [params.homeInfoParams]
+    Title = "Hi，我是 duet"
+    Content = "记录想法，分享生活。"
 
 [menu]
   [[menu.main]]
