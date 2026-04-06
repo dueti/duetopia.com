@@ -3,6 +3,9 @@ languageCode = "zh-cn"
 title = "Duet"
 theme = "PaperMod"
 
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+
 [params]
   env = "production"
   title = "Duet"
@@ -22,17 +25,25 @@ theme = "PaperMod"
     icon = "/avatar.png"
     iconHeight = 30
 
-  [[params.socialIcons]]
-    name = "x"
-    url = "https://x.com/Duetopid"
-
-
 [menu]
   [[menu.main]]
     name = "文章"
     url = "/posts/"
     weight = 1
   [[menu.main]]
-    name = "关于"
-    url = "/about/"
+    name = "标签"
+    url = "/tags/"
     weight = 2
+  [[menu.main]]
+    name = "搜索"
+    url = "/search/"
+    weight = 3
+    params = {accesskey = "/"}
+  [[menu.main]]
+    name = "归档"
+    url = "/archives/"
+    weight = 4
+  [[menu.main]]
+    name = "X"
+    url = "https://x.com/Duetopid"
+    weight = 5
