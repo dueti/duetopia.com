@@ -6,8 +6,8 @@ theme = "PaperMod"
 [params]
   env = "production"
   title = "Duetopia Blog"
-  description = ""
-  author = "Me"
+  description = "duet 的个人博客"
+  author = "duet"
   ShowReadingTime = true
   ShowShareButtons = false
   ShowPostNavLinks = true
@@ -15,6 +15,16 @@ theme = "PaperMod"
   ShowCodeCopyButtons = true
   ShowToc = true
   defaultTheme = "auto"
+  favicon = "/favicon.png"
+
+  [params.profileMode]
+    enabled = true
+    title = "duet"
+    subtitle = "记录想法，分享生活"
+    imageUrl = "/avatar.png"
+    imageTitle = "duet"
+    imageWidth = 120
+    imageHeight = 120
 
 [menu]
   [[menu.main]]
