@@ -3,3 +3,14 @@
     margin-right: 6px;
     vertical-align: middle;
 }
+
+/* 社交图标区域紧凑化 */
+.first-entry {
+    min-height: unset;
+    padding: 12px 0;
+}
+
+.first-entry .entry-header,
+.first-entry .entry-content {
+    display: none;
+}
