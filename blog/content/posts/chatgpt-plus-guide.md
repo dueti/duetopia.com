@@ -1,6 +1,6 @@
 ---
 title: "订阅 ChatGPT Plus 完整指南（美区 Apple ID + VPN）"
-date: 2026-04-06
+date: 2026-04-06T11:00:00+08:00
 draft: false
 tags: ["ChatGPT", "教程", "Apple ID"]
 description: "手把手教你注册美区 Apple ID、配置 VPN、订阅 ChatGPT Plus，附完整截图。"

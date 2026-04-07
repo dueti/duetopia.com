@@ -1,6 +1,6 @@
 ---
 title: "用 AI 搭建自己的网站和 Blog"
-date: 2026-04-06
+date: 2026-04-06T10:00:00+08:00
 draft: false
 tags: ["AI", "建站", "Hugo", "Cloudflare"]
 ---
