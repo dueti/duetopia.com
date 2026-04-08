@@ -1,16 +1,390 @@
+/* ============================================================
+   Duet Blog — Custom Design Override
+   Aesthetic: Editorial Refinement / Literary Magazine
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap');
+
+/* ── Design Tokens ── */
+:root {
+    --gap: 28px;
+    --content-gap: 24px;
+    --main-width: 740px;
+    --nav-width: 1080px;
+    --radius: 4px;
+
+    --theme: #faf9f6;
+    --entry: #f5f3ee;
+    --primary: #1a1816;
+    --secondary: #6b6560;
+    --tertiary: #dbd8d0;
+    --content: #2d2a27;
+    --border: #e8e4dc;
+    --accent: #8b5e3c;
+    --accent-light: #c49a72;
+
+    --code-block-bg: #1e1c1a;
+    --code-bg: #ede9e2;
+
+    color-scheme: light;
+}
+
+:root[data-theme="dark"] {
+    --theme: #131211;
+    --entry: #1c1a18;
+    --primary: #e8e4dc;
+    --secondary: #8a8480;
+    --tertiary: #2e2b28;
+    --content: #ccc8c0;
+    --border: #2a2724;
+    --accent: #c49a72;
+    --accent-light: #8b5e3c;
+
+    --code-block-bg: #1c1a18;
+    --code-bg: #222019;
+
+    color-scheme: dark;
+}
+
+/* ── Base Typography ── */
+body {
+    font-family: 'DM Sans', -apple-system, sans-serif;
+    font-size: 17px;
+    line-height: 1.7;
+    letter-spacing: -0.01em;
+    background: var(--theme);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-weight: 500;
+    letter-spacing: -0.02em;
+    line-height: 1.2;
+}
+
+/* ── Header / Nav ── */
+.header {
+    border-bottom: 1px solid var(--border);
+    background: var(--theme);
+}
+
+.logo a {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 26px;
+    font-weight: 600;
+    letter-spacing: -0.03em;
+    color: var(--primary);
+}
+
 .logo a img {
     border-radius: 50%;
-    margin-right: 6px;
+    margin-right: 8px;
     vertical-align: middle;
 }
 
-/* 社交图标区域紧凑化 */
+#menu li a {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--secondary);
+    transition: color 0.2s;
+}
+
+#menu li a:hover,
+#menu li a.active {
+    color: var(--primary);
+}
+
+/* ── Home first-entry (profile area) ── */
 .first-entry {
     min-height: unset;
-    padding: 12px 0;
+    padding: 40px 0 16px;
 }
 
 .first-entry .entry-header,
 .first-entry .entry-content {
     display: none;
+}
+
+/* ── Post List ── */
+.post-entry {
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid var(--border);
+    border-radius: 0;
+    margin-bottom: 0;
+    padding: 24px 0;
+    transition: none;
+}
+
+.post-entry:first-of-type {
+    border-top: 1px solid var(--border);
+}
+
+.post-entry:active {
+    transform: none;
+}
+
+.post-entry:hover .entry-header h2 {
+    color: var(--accent);
+}
+
+.entry-header h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 26px;
+    font-weight: 500;
+    transition: color 0.2s;
+    margin-bottom: 6px;
+}
+
+.entry-content {
+    font-size: 14px;
+    line-height: 1.65;
+    color: var(--secondary);
+    margin: 6px 0 10px;
+}
+
+.entry-footer {
+    font-size: 12px;
+    letter-spacing: 0.03em;
+    color: var(--tertiary);
+}
+
+.entry-footer .tag {
+    border: 1px solid var(--border);
+    border-radius: 2px;
+    padding: 1px 6px;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--secondary);
+    transition: border-color 0.2s, color 0.2s;
+}
+
+.entry-footer .tag:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+}
+
+/* ── Post / Article ── */
+.post-header {
+    margin-bottom: 40px;
+    padding-bottom: 28px;
+    border-bottom: 1px solid var(--border);
+}
+
+.post-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 48px;
+    font-weight: 500;
+    line-height: 1.1;
+    letter-spacing: -0.03em;
+    margin-bottom: 16px;
+}
+
+.post-meta {
+    font-size: 13px;
+    letter-spacing: 0.03em;
+    color: var(--secondary);
+    text-transform: uppercase;
+}
+
+.post-content {
+    font-size: 18px;
+    line-height: 1.85;
+}
+
+.post-content h1,
+.post-content h2,
+.post-content h3,
+.post-content h4 {
+    font-family: 'Cormorant Garamond', serif;
+    margin-top: 2.4em;
+    margin-bottom: 0.6em;
+}
+
+.post-content h2 {
+    font-size: 32px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--border);
+}
+
+.post-content h3 {
+    font-size: 24px;
+    color: var(--accent);
+}
+
+.post-content p {
+    margin-bottom: 1.4em;
+}
+
+.post-content a {
+    color: var(--accent);
+    text-decoration: underline;
+    text-decoration-color: var(--accent-light);
+    text-underline-offset: 3px;
+    transition: text-decoration-color 0.2s;
+}
+
+.post-content a:hover {
+    text-decoration-color: var(--accent);
+}
+
+.post-content blockquote {
+    border-left: 2px solid var(--accent);
+    padding-left: 20px;
+    margin-left: 0;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22px;
+    font-style: italic;
+    font-weight: 300;
+    color: var(--secondary);
+    line-height: 1.6;
+}
+
+.post-content code {
+    font-size: 0.85em;
+    background: var(--code-bg);
+    border-radius: 3px;
+    padding: 2px 6px;
+}
+
+.post-content pre code {
+    background: transparent;
+    padding: 0;
+    font-size: 0.9em;
+}
+
+/* ── TOC ── */
+.toc {
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 16px 20px;
+    font-size: 14px;
+    background: var(--entry);
+}
+
+.toc details summary {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--secondary);
+    cursor: pointer;
+}
+
+/* ── Breadcrumbs ── */
+.breadcrumbs {
+    font-size: 13px;
+    color: var(--secondary);
+    margin-bottom: 16px;
+}
+
+/* ── Tags / Archives ── */
+.terms-tags a {
+    border: 1px solid var(--border);
+    border-radius: 2px;
+    padding: 4px 10px;
+    font-size: 13px;
+    color: var(--secondary);
+    transition: border-color 0.2s, color 0.2s;
+    background: transparent;
+}
+
+.terms-tags a:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+    background: transparent;
+}
+
+/* ── Footer ── */
+.footer {
+    border-top: 1px solid var(--border);
+    font-size: 13px;
+    color: var(--tertiary);
+    letter-spacing: 0.02em;
+}
+
+.footer a {
+    color: var(--secondary);
+}
+
+/* ── Search ── */
+#searchbox input {
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    background: var(--entry);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 16px;
+    padding: 10px 16px;
+    color: var(--primary);
+    transition: border-color 0.2s;
+}
+
+#searchbox input:focus {
+    border-color: var(--accent);
+    outline: none;
+}
+
+/* ── Theme Toggle ── */
+button#theme-toggle {
+    font-size: 20px;
+    opacity: 0.6;
+    transition: opacity 0.2s;
+}
+
+button#theme-toggle:hover {
+    opacity: 1;
+}
+
+/* ── Scrollbar ── */
+::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
+}
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb {
+    background: var(--tertiary);
+    border-radius: 2px;
+}
+
+/* ── Archive year heading ── */
+.archive-year {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 36px;
+    font-weight: 300;
+    color: var(--accent);
+    margin-top: 40px;
+    margin-bottom: 16px;
+    letter-spacing: -0.02em;
+}
+
+.archive-entry-title a {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 20px;
+    font-weight: 400;
+    color: var(--primary);
+    transition: color 0.2s;
+}
+
+.archive-entry-title a:hover {
+    color: var(--accent);
+}
+
+/* ── List background fix ── */
+.list {
+    background: var(--theme);
+}
+
+[data-theme="dark"] .list {
+    background: var(--theme);
+}
+
+/* ── Selection ── */
+::selection {
+    background: var(--accent);
+    color: #faf9f6;
 }
