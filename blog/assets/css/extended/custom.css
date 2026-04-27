@@ -254,38 +254,33 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .post-content pre {
-    background: var(--code-bg) !important;
-    border: 1px solid var(--border);
+    background: #23201d !important;
+    border: none;
     border-left: 3px solid var(--accent);
     border-radius: var(--radius);
     padding: 18px 22px;
     margin: 24px 0;
     overflow-x: auto;
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.03);
 }
 
 .post-content pre code {
     background: transparent !important;
-    color: var(--content);
+    color: #e8e0d0;
     padding: 0;
     font-family: 'JetBrains Mono', 'SF Mono', Menlo, Consolas, monospace;
     font-size: 0.88em;
-    line-height: 1.65;
+    line-height: 1.7;
 }
 
-:root[data-theme="dark"] .post-content pre {
-    box-shadow: none;
-}
-
-/* Override Hugo chroma syntax highlighting for editorial palette */
-.post-content .chroma { background: transparent !important; color: var(--content); }
+/* Hugo chroma syntax highlighting — warm dark palette */
+.post-content .chroma { background: transparent !important; color: #e8e0d0; }
 .post-content .chroma .k,
 .post-content .chroma .kc,
 .post-content .chroma .kd,
 .post-content .chroma .kn,
 .post-content .chroma .kp,
 .post-content .chroma .kr,
-.post-content .chroma .kt { color: #6b4a7a; font-weight: 500; }
+.post-content .chroma .kt { color: #c8a2d4; font-weight: 500; }
 .post-content .chroma .s,
 .post-content .chroma .s1,
 .post-content .chroma .s2,
@@ -297,43 +292,26 @@ h1, h2, h3, h4, h5, h6 {
 .post-content .chroma .si,
 .post-content .chroma .sx,
 .post-content .chroma .sr,
-.post-content .chroma .ss { color: #8b5e3c; }
+.post-content .chroma .ss { color: #e8b87a; }
 .post-content .chroma .m,
 .post-content .chroma .mb,
 .post-content .chroma .mf,
 .post-content .chroma .mh,
 .post-content .chroma .mi,
-.post-content .chroma .mo { color: #a35a3a; }
+.post-content .chroma .mo { color: #f0a878; }
 .post-content .chroma .nf,
 .post-content .chroma .nb,
 .post-content .chroma .nc,
-.post-content .chroma .nn { color: #2a5d6e; }
+.post-content .chroma .nn { color: #8cc5d6; }
 .post-content .chroma .c,
 .post-content .chroma .c1,
 .post-content .chroma .cm,
 .post-content .chroma .cs,
 .post-content .chroma .cp,
-.post-content .chroma .cpf { color: #9a948b; font-style: italic; }
+.post-content .chroma .cpf { color: #7a746c; font-style: italic; }
 .post-content .chroma .o,
 .post-content .chroma .ow,
-.post-content .chroma .p { color: #5a544e; }
-
-:root[data-theme="dark"] .post-content .chroma .k,
-:root[data-theme="dark"] .post-content .chroma .kc,
-:root[data-theme="dark"] .post-content .chroma .kd,
-:root[data-theme="dark"] .post-content .chroma .kn,
-:root[data-theme="dark"] .post-content .chroma .kp,
-:root[data-theme="dark"] .post-content .chroma .kr,
-:root[data-theme="dark"] .post-content .chroma .kt { color: #b48ec4; }
-:root[data-theme="dark"] .post-content .chroma .s,
-:root[data-theme="dark"] .post-content .chroma .s1,
-:root[data-theme="dark"] .post-content .chroma .s2 { color: #d4a373; }
-:root[data-theme="dark"] .post-content .chroma .nf,
-:root[data-theme="dark"] .post-content .chroma .nb,
-:root[data-theme="dark"] .post-content .chroma .nc { color: #7fb3c4; }
-:root[data-theme="dark"] .post-content .chroma .c,
-:root[data-theme="dark"] .post-content .chroma .c1,
-:root[data-theme="dark"] .post-content .chroma .cm { color: #6b665f; }
+.post-content .chroma .p { color: #b8b0a4; }
 
 /* ── TOC ── */
 .toc {
