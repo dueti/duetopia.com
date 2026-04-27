@@ -80,13 +80,19 @@ description: "手把手教你注册美区 Apple ID、配置 VPN、订阅 ChatGPT
 
 ## 2. VPN 及 ChatGPT
 
-### 手机端
+> ⚠️ 快连目前节点不稳定，连接成功率和速度都受影响，建议优先考虑下面的奶昔机场。
 
-用美区 ID 在 App Store 搜索并安装：**快连**
+### 推荐：奶昔机场
 
-### 电脑端
+注册链接：[nxonearth.com（含邀请码）](https://nxonearth.com/signupbyemail.aspx?MemberCode=c3ee1b6248d44aaeafc3d7730575c2c320250615154946)
 
-下载链接（推荐 Chrome 访问）：
+支持 Mac / Windows / iOS / Android，节点多，访问 ChatGPT 稳定。
+
+### 备选：快连
+
+**手机端**：用美区 ID 在 App Store 搜索并安装 **快连**。
+
+**电脑端**下载链接（推荐 Chrome 访问）：
 
 - [https://github.com/LetsgoNetwork/LetsGo_2](https://github.com/LetsgoNetwork/LetsGo_2/blob/main/README.md)
 - 备用：[https://bitbucket.org/letsgo666/letsgogo_6](https://bitbucket.org/letsgo666/letsgogo_6/src/main/README.md)
@@ -98,6 +104,8 @@ description: "手把手教你注册美区 Apple ID、配置 VPN、订阅 ChatGPT
 ## 3. 充值礼品卡（可选）
 
 礼品卡与 U 卡二选一即可。ChatGPT Plus 会员需要 20 美元，建议至少购买 21 美元的礼品卡。
+
+具体购买流程见：[美区 Apple 礼品卡购买指南（官网直购最安全）](/posts/apple-giftcard-guide/)
 
 ---
 
