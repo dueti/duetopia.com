@@ -23,7 +23,7 @@ description: "一份赴港开银行账户的完整 checklist，从证件签注�
 >
 > 深圳警务电子地图，可查询附近最近的出入境智能签注点：[msjw.ga.sz.gov.cn](https://msjw.ga.sz.gov.cn/jwdzdt/mobile/index.html?machine=)
 
-![港澳通行证签注](/images/hk-bank-prep/01-endorsement.png)
+<img src="/images/hk-bank-prep/01-endorsement.png" alt="港澳通行证签注" style="max-width:100%">
 
 ### 2. 手机漫游（境外上网）
 
@@ -34,7 +34,7 @@ description: "一份赴港开银行账户的完整 checklist，从证件签注�
 - **移动用户额外动作**：赴港当天发送短信 **`BLHKRTC`** 到 **`10086`**，防止无法接收验证码
 - **特殊号段预警**：**177 / 147** 开头号码可能无法接收验证码，建议换号或备一张其他卡
 
-![电信漫游设置](/images/hk-bank-prep/02-telecom-roaming.png)
+<img src="/images/hk-bank-prep/02-telecom-roaming.png" alt="电信漫游设置" style="max-width:100%">
 
 ### 3. 邮箱与内地银行卡
 
@@ -112,7 +112,7 @@ description: "一份赴港开银行账户的完整 checklist，从证件签注�
 - **安全问答**（建议统一设为自己姓名拼音，方便记忆）
 - **6 位 PIN 码**等
 
-![信息存档示意](/images/hk-bank-prep/04-credentials-record.png)
+<img src="/images/hk-bank-prep/04-credentials-record.png" alt="信息存档示意" style="max-width:100%">
 
 ---
 
