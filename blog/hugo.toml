@@ -38,7 +38,7 @@ theme = "PaperMod"
 
   [[params.socialIcons]]
     name = "wechat"
-    url = "javascript:void(0)"
+    url = "#wechat"
 
 [menu]
   [[menu.main]]
