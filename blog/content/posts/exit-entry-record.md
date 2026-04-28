@@ -20,7 +20,7 @@ description: "微信「移民局 12367」小程序查询并下载出入境记录
 
 > 如果查不到出入境记录，再等待一会儿。
 
-<img src="/images/exit-entry-record/01.png" alt="查询出入境记录" style="max-width:85%">
+<img src="/images/exit-entry-record/01.png" alt="查询出入境记录" style="max-width:100%">
 
 ---
 
