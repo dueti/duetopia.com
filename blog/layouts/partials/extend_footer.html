@@ -1,0 +1,24 @@
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  var links = document.querySelectorAll('.social-icons a');
+  links.forEach(function(link) {
+    if (link.href && link.href.indexOf('javascript:void') !== -1 && link.querySelector('svg')) {
+      var svg = link.querySelector('svg');
+      var title = svg.querySelector('title');
+      if (title && title.textContent.toLowerCase().indexOf('wechat') !== -1) {
+        link.addEventListener('click', function(e) {
+          e.preventDefault();
+          navigator.clipboard.writeText('duet-xy').then(function() {
+            var tip = document.createElement('span');
+            tip.textContent = '微信号 duet-xy 已复制';
+            tip.style.cssText = 'position:fixed;top:20%;left:50%;transform:translateX(-50%);background:#333;color:#fff;padding:10px 20px;border-radius:8px;font-size:15px;z-index:9999;transition:opacity 0.5s';
+            document.body.appendChild(tip);
+            setTimeout(function() { tip.style.opacity = '0'; }, 1500);
+            setTimeout(function() { tip.remove(); }, 2000);
+          });
+        });
+      }
+    }
+  });
+});
+</script>
