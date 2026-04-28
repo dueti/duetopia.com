@@ -22,7 +22,7 @@ description: "小米旗下香港数字银行，线上开户约 5 分钟，手把
 
 前往 **App Store** 或 **Google Play**，搜索「天星银行 Airstar Bank」，下载安装官方 App。
 
-官网注册页：https://www.elebank.com/zh-cn/signup-now
+官网下载：https://www.elebank.com/zh-cn/signup-now
 
 ---
 
