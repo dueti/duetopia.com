@@ -43,6 +43,12 @@ body, button, input, textarea, select,
   display: inline-flex;
   align-items: center;
   padding: 0;
+  opacity: 0.75;
+  transition: opacity 0.15s ease, transform 0.15s ease;
+}
+.nav .logo .logo-switches button:hover {
+  opacity: 1;
+  transform: scale(1.12);
 }
 .nav .logo .logo-switches button svg {
   transform: translateY(3px);
@@ -65,6 +71,12 @@ body, button, input, textarea, select,
   display: inline-flex;
   align-items: center;
   padding: 0 4px;
+  opacity: 0.75;
+  transition: opacity 0.15s ease, transform 0.15s ease;
+}
+.logo .social-icons-nav a:hover {
+  opacity: 1;
+  transform: scale(1.12);
 }
 .logo .social-icons-nav svg {
   height: 18px;
@@ -90,11 +102,28 @@ h1, h2, h3, h4, h5, h6,
                "PingFang SC", "Helvetica Neue", "Microsoft YaHei", sans-serif;
 }
 
+.post-entry {
+  border: none !important;
+  padding: 32px 0 !important;
+  margin: 0 !important;
+  background: transparent !important;
+}
+.post-entry + .post-entry {
+  border-top: 1px solid color-mix(in srgb, var(--border) 50%, transparent);
+}
+.post-entry .entry-header {
+  margin-bottom: 12px;
+}
 .post-entry .entry-header h2 {
   font-size: 28px;
   line-height: 1.4;
+  margin: 0;
 }
 .post-entry .entry-content {
   font-size: 17px;
   line-height: 1.7;
+  margin: 0 0 8px;
+}
+.post-entry .entry-footer {
+  margin-top: 0;
 }
