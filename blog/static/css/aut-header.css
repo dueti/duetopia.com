@@ -1,16 +1,12 @@
-@import url("https://tw93.fun/css/jinkai.css");
-
 .aut-header {
   position: relative;
   overflow: hidden;
-  width: calc(100vw - 48px);
-  margin-left: calc(50% - 50vw + 24px);
-  margin-right: calc(50% - 50vw + 24px);
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+  margin-bottom: 30px;
   height: 140px;
   background: #15141a;
-  margin-bottom: 30px;
-  border-radius: 6px;
 }
 .aut-header svg { margin-top: 20px; display: block; }
 .aut-header canvas { position: absolute; left: 0; top: 0; pointer-events: none; }
-.aut-header text { font-family: 'TsangerJinKai02', Georgia, serif; }
