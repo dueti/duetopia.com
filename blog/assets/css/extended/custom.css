@@ -1,16 +1,19 @@
 /* ============================================================
-   Duet Blog — Custom Design Override
-   Aesthetic: Editorial Refinement / Literary Magazine
+   Duet Blog — Design System
+   Aesthetic: 中文克制 / 苍耳今楷 + AUT NIHILO 拉丁箴言
+   Single source of truth — no overrides in /static/css.
    ============================================================ */
 
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&family=JetBrains+Mono:wght@400;500&display=swap');
+/* Font imports moved to layouts/partials/extend_head.html (must precede the bundled
+   stylesheet — Hugo's resources.Concat puts this file after PaperMod CSS, which
+   breaks @import per CSS spec). */
 
 /* ── Design Tokens ── */
 :root {
     --gap: 28px;
     --content-gap: 24px;
-    --main-width: 740px;
-    --nav-width: 1080px;
+    --main-width: 880px;
+    --nav-width: 880px;
     --radius: 4px;
 
     --theme: #faf9f6;
@@ -25,6 +28,10 @@
 
     --code-block-bg: #1e1c1a;
     --code-bg: #ede9e2;
+
+    --font-cn: 'TsangerJinKai02', -apple-system, BlinkMacSystemFont,
+               "PingFang SC", "Helvetica Neue", "Microsoft YaHei", sans-serif;
+    --font-mono: 'JetBrains Mono', 'SF Mono', Menlo, Consolas, monospace;
 
     color-scheme: light;
 }
@@ -47,19 +54,25 @@
 }
 
 /* ── Base Typography ── */
+body, button, input, textarea, select,
+.nav, .nav a, .main, .post-entry, .post-content,
+.entry-header, .entry-content, .entry-footer,
+.post-meta, .post-footer {
+    font-family: var(--font-cn);
+}
+
 body {
-    font-family: 'DM Sans', -apple-system, sans-serif;
     font-size: 17px;
     line-height: 1.7;
-    letter-spacing: -0.01em;
     background: var(--theme);
 }
 
-h1, h2, h3, h4, h5, h6 {
-    font-family: 'Cormorant Garamond', Georgia, serif;
-    font-weight: 500;
-    letter-spacing: -0.02em;
-    line-height: 1.2;
+h1, h2, h3, h4, h5, h6,
+.post-title, .entry-title,
+.post-content h1, .post-content h2, .post-content h3 {
+    font-family: var(--font-cn);
+    font-weight: 600;
+    line-height: 1.3;
 }
 
 /* ── Header / Nav ── */
@@ -68,43 +81,94 @@ h1, h2, h3, h4, h5, h6 {
     background: var(--theme);
 }
 
-.logo a {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 26px;
-    font-weight: 600;
-    letter-spacing: -0.03em;
+.nav .logo {
+    align-items: center;
+}
+.nav .logo > a {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 28px;
+    font-weight: 700;
+    letter-spacing: -0.02em;
     color: var(--primary);
 }
-
-.logo a img {
+.nav .logo > a img {
     border-radius: 50%;
-    margin-right: 8px;
+    display: block;
+    margin-right: 4px;
     vertical-align: middle;
 }
+.nav .logo .logo-switches {
+    display: inline-flex;
+    align-items: center;
+}
+.nav .logo .logo-switches button {
+    display: inline-flex;
+    align-items: center;
+    padding: 0;
+    opacity: 0.75;
+    transition: opacity 0.15s ease, transform 0.15s ease;
+}
+.nav .logo .logo-switches button:hover {
+    opacity: 1;
+    transform: scale(1.12);
+}
+.nav .logo .logo-switches button svg {
+    transform: translateY(3px);
+}
 
-#menu li a {
-    font-family: 'DM Sans', sans-serif;
-    font-size: 13px;
+.nav #menu a,
+.nav #menu li a {
+    font-size: 20px;
     font-weight: 400;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
     color: var(--secondary);
     transition: color 0.2s;
 }
-
-#menu li a:hover,
-#menu li a.active {
+.nav #menu li a:hover,
+.nav #menu li a.active {
     color: var(--primary);
 }
 
-/* ── Home first-entry (profile area) ── */
-.first-entry {
-    min-height: unset;
-    padding: 40px 0 16px;
+/* Social icons — moved from banner partial into .logo by site.js */
+.logo .social-icons-nav {
+    display: inline-flex;
+    align-items: center;
+    margin-left: 14px;
+    padding: 0;
+    gap: 4px;
+}
+.logo .social-icons-nav a {
+    display: inline-flex;
+    align-items: center;
+    padding: 0 4px;
+    opacity: 0.75;
+    transition: opacity 0.15s ease, transform 0.15s ease;
+}
+.logo .social-icons-nav a:hover {
+    opacity: 1;
+    transform: scale(1.12);
+}
+.logo .social-icons-nav svg {
+    height: 18px;
+    width: 18px;
+    vertical-align: middle;
+    transform: translateY(3px);
 }
 
+/* Hidden source containers (banner partial wraps social_icons here) */
+.nav-social-source,
+.home-info-compact { display: none; }
+
+/* ── Home / First entry ── */
+.first-entry {
+    min-height: unset;
+    margin: 0;
+    padding: 0;
+}
 .first-entry .entry-header,
-.first-entry .entry-content {
+.first-entry .entry-content,
+.first-entry .entry-footer {
     display: none;
 }
 
@@ -112,58 +176,50 @@ h1, h2, h3, h4, h5, h6 {
 .post-entry {
     background: transparent;
     border: none;
-    border-bottom: 1px solid var(--border);
     border-radius: 0;
-    margin-bottom: 0;
-    padding: 24px 0;
+    margin: 0;
+    padding: 32px 0;
     transition: none;
 }
-
-.post-entry:first-of-type {
-    border-top: 1px solid var(--border);
+.post-entry + .post-entry {
+    border-top: 1px solid color-mix(in srgb, var(--border) 50%, transparent);
 }
-
 .post-entry:active {
     transform: none;
 }
-
 .post-entry:hover .entry-header h2 {
     color: var(--accent);
 }
-
-.entry-header h2 {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 26px;
-    font-weight: 500;
+.post-entry .entry-header {
+    margin-bottom: 12px;
+}
+.post-entry .entry-header h2 {
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 1.4;
+    margin: 0;
     transition: color 0.2s;
-    margin-bottom: 6px;
 }
-
-.entry-content {
-    font-size: 14px;
-    line-height: 1.65;
+.post-entry .entry-content {
+    font-size: 17px;
+    line-height: 1.7;
     color: var(--secondary);
-    margin: 6px 0 10px;
+    margin: 0 0 8px;
 }
-
-.entry-footer {
-    font-size: 12px;
-    letter-spacing: 0.03em;
+.post-entry .entry-footer {
+    font-size: 13px;
+    letter-spacing: 0.02em;
     color: var(--tertiary);
 }
-
-.entry-footer .tag {
+.post-entry .entry-footer .tag {
     border: 1px solid var(--border);
     border-radius: 2px;
     padding: 1px 6px;
     font-size: 11px;
-    text-transform: uppercase;
-    letter-spacing: 0.06em;
     color: var(--secondary);
     transition: border-color 0.2s, color 0.2s;
 }
-
-.entry-footer .tag:hover {
+.post-entry .entry-footer .tag:hover {
     border-color: var(--accent);
     color: var(--accent);
 }
@@ -174,65 +230,52 @@ h1, h2, h3, h4, h5, h6 {
     padding-bottom: 28px;
     border-bottom: 1px solid var(--border);
 }
-
 .post-title {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 48px;
-    font-weight: 500;
-    line-height: 1.1;
-    letter-spacing: -0.03em;
+    font-size: 40px;
+    font-weight: 600;
+    line-height: 1.25;
+    letter-spacing: -0.01em;
     margin-bottom: 16px;
 }
-
 .post-meta {
     font-size: 13px;
     letter-spacing: 0.03em;
     color: var(--secondary);
-    text-transform: uppercase;
 }
 
 .post-content {
-    font-size: 18px;
+    font-size: 22px;
     line-height: 1.85;
+    letter-spacing: 0.01em;
+    color: var(--content);
 }
-
 .post-content h1,
 .post-content h2,
 .post-content h3,
 .post-content h4 {
-    font-family: 'Cormorant Garamond', serif;
-    margin-top: 2.4em;
+    margin-top: 2em;
     margin-bottom: 0.6em;
+    font-weight: 600;
 }
-
 .post-content h2 {
-    font-size: 32px;
+    font-size: 30px;
     padding-bottom: 8px;
     border-bottom: 1px solid var(--border);
 }
-
 .post-content h3 {
     font-size: 24px;
     color: var(--accent);
 }
-
 .post-content p {
-    margin-bottom: 1.4em;
+    margin: 1em 0;
 }
-
 .post-content img {
-    max-width: 50%;
+    max-width: 100%;
     height: auto;
     display: block;
-    margin: 1.2em auto;
+    margin: 1.5em auto;
+    border-radius: var(--radius);
 }
-
-@media (max-width: 640px) {
-    .post-content img {
-        max-width: 100%;
-    }
-}
-
 .post-content a {
     color: var(--accent);
     text-decoration: underline;
@@ -240,34 +283,25 @@ h1, h2, h3, h4, h5, h6 {
     text-underline-offset: 3px;
     transition: text-decoration-color 0.2s;
 }
-
 .post-content a:hover {
     text-decoration-color: var(--accent);
 }
-
 .post-content blockquote {
-    border-left: 2px solid var(--accent);
+    border-left: 3px solid var(--accent);
     padding-left: 20px;
     margin-left: 0;
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 22px;
-    font-style: italic;
-    font-weight: 300;
     color: var(--secondary);
-    line-height: 1.6;
 }
-
 .post-content code {
-    font-family: 'JetBrains Mono', 'SF Mono', Menlo, Consolas, monospace;
+    font-family: var(--font-mono);
     font-size: 0.85em;
     background: var(--code-bg);
     color: var(--accent);
     border-radius: 3px;
     padding: 2px 6px;
 }
-
 .post-content pre {
-    background: #23201d !important;
+    background: var(--code-block-bg) !important;
     border: none;
     border-left: 3px solid var(--accent);
     border-radius: var(--radius);
@@ -275,56 +309,31 @@ h1, h2, h3, h4, h5, h6 {
     margin: 24px 0;
     overflow-x: auto;
 }
-
 .post-content pre code {
     background: transparent !important;
     color: #e8e0d0;
     padding: 0;
-    font-family: 'JetBrains Mono', 'SF Mono', Menlo, Consolas, monospace;
+    font-family: var(--font-mono);
     font-size: 0.88em;
     line-height: 1.7;
 }
 
 /* Hugo chroma syntax highlighting — warm dark palette */
 .post-content .chroma { background: transparent !important; color: #e8e0d0; }
-.post-content .chroma .k,
-.post-content .chroma .kc,
-.post-content .chroma .kd,
-.post-content .chroma .kn,
-.post-content .chroma .kp,
-.post-content .chroma .kr,
+.post-content .chroma .k, .post-content .chroma .kc, .post-content .chroma .kd,
+.post-content .chroma .kn, .post-content .chroma .kp, .post-content .chroma .kr,
 .post-content .chroma .kt { color: #c8a2d4; font-weight: 500; }
-.post-content .chroma .s,
-.post-content .chroma .s1,
-.post-content .chroma .s2,
-.post-content .chroma .sb,
-.post-content .chroma .sc,
-.post-content .chroma .sd,
-.post-content .chroma .se,
-.post-content .chroma .sh,
-.post-content .chroma .si,
-.post-content .chroma .sx,
-.post-content .chroma .sr,
-.post-content .chroma .ss { color: #e8b87a; }
-.post-content .chroma .m,
-.post-content .chroma .mb,
-.post-content .chroma .mf,
-.post-content .chroma .mh,
-.post-content .chroma .mi,
-.post-content .chroma .mo { color: #f0a878; }
-.post-content .chroma .nf,
-.post-content .chroma .nb,
-.post-content .chroma .nc,
+.post-content .chroma .s, .post-content .chroma .s1, .post-content .chroma .s2,
+.post-content .chroma .sb, .post-content .chroma .sc, .post-content .chroma .sd,
+.post-content .chroma .se, .post-content .chroma .sh, .post-content .chroma .si,
+.post-content .chroma .sx, .post-content .chroma .sr, .post-content .chroma .ss { color: #e8b87a; }
+.post-content .chroma .m, .post-content .chroma .mb, .post-content .chroma .mf,
+.post-content .chroma .mh, .post-content .chroma .mi, .post-content .chroma .mo { color: #f0a878; }
+.post-content .chroma .nf, .post-content .chroma .nb, .post-content .chroma .nc,
 .post-content .chroma .nn { color: #8cc5d6; }
-.post-content .chroma .c,
-.post-content .chroma .c1,
-.post-content .chroma .cm,
-.post-content .chroma .cs,
-.post-content .chroma .cp,
-.post-content .chroma .cpf { color: #7a746c; font-style: italic; }
-.post-content .chroma .o,
-.post-content .chroma .ow,
-.post-content .chroma .p { color: #b8b0a4; }
+.post-content .chroma .c, .post-content .chroma .c1, .post-content .chroma .cm,
+.post-content .chroma .cs, .post-content .chroma .cp, .post-content .chroma .cpf { color: #7a746c; font-style: italic; }
+.post-content .chroma .o, .post-content .chroma .ow, .post-content .chroma .p { color: #b8b0a4; }
 
 /* ── TOC ── */
 .toc {
@@ -334,13 +343,9 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 14px;
     background: var(--entry);
 }
-
 .toc details summary {
-    font-family: 'DM Sans', sans-serif;
-    font-size: 12px;
+    font-size: 13px;
     font-weight: 500;
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
     color: var(--secondary);
     cursor: pointer;
 }
@@ -357,12 +362,11 @@ h1, h2, h3, h4, h5, h6 {
     border: 1px solid var(--border);
     border-radius: 2px;
     padding: 4px 10px;
-    font-size: 13px;
+    font-size: 14px;
     color: var(--secondary);
-    transition: border-color 0.2s, color 0.2s;
     background: transparent;
+    transition: border-color 0.2s, color 0.2s;
 }
-
 .terms-tags a:hover {
     border-color: var(--accent);
     color: var(--accent);
@@ -376,7 +380,6 @@ h1, h2, h3, h4, h5, h6 {
     color: var(--tertiary);
     letter-spacing: 0.02em;
 }
-
 .footer a {
     color: var(--secondary);
 }
@@ -386,74 +389,50 @@ h1, h2, h3, h4, h5, h6 {
     border: 1px solid var(--border);
     border-radius: var(--radius);
     background: var(--entry);
-    font-family: 'DM Sans', sans-serif;
+    font-family: var(--font-cn);
     font-size: 16px;
     padding: 10px 16px;
     color: var(--primary);
     transition: border-color 0.2s;
 }
-
 #searchbox input:focus {
     border-color: var(--accent);
     outline: none;
 }
 
-/* ── Theme Toggle ── */
-button#theme-toggle {
-    font-size: 20px;
-    opacity: 0.6;
-    transition: opacity 0.2s;
-}
-
-button#theme-toggle:hover {
-    opacity: 1;
-}
-
 /* ── Scrollbar ── */
-::-webkit-scrollbar {
-    width: 4px;
-    height: 4px;
-}
+::-webkit-scrollbar { width: 4px; height: 4px; }
 ::-webkit-scrollbar-track { background: transparent; }
-::-webkit-scrollbar-thumb {
-    background: var(--tertiary);
-    border-radius: 2px;
-}
+::-webkit-scrollbar-thumb { background: var(--tertiary); border-radius: 2px; }
 
-/* ── Archive year heading ── */
+/* ── Archive ── */
 .archive-year {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 36px;
-    font-weight: 300;
+    font-size: 32px;
+    font-weight: 600;
     color: var(--accent);
     margin-top: 40px;
     margin-bottom: 16px;
-    letter-spacing: -0.02em;
 }
-
 .archive-entry-title a {
-    font-family: 'Cormorant Garamond', serif;
     font-size: 20px;
-    font-weight: 400;
     color: var(--primary);
     transition: color 0.2s;
 }
-
 .archive-entry-title a:hover {
     color: var(--accent);
 }
 
-/* ── List background fix ── */
-.list {
-    background: var(--theme);
-}
-
-[data-theme="dark"] .list {
-    background: var(--theme);
-}
+/* ── List page background ── */
+.list { background: var(--theme); }
+[data-theme="dark"] .list { background: var(--theme); }
 
 /* ── Selection ── */
 ::selection {
     background: var(--accent);
     color: #faf9f6;
+}
+
+/* ── AUT NIHILO Banner SVG text ── */
+.aut-header text {
+    font-family: var(--font-cn);
 }

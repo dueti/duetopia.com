@@ -22,15 +22,12 @@ theme = "PaperMod"
   ShowToc = true
   defaultTheme = "auto"
   favicon = "/favicon.png"
+  disableSpecial1stPost = true
 
   [params.label]
     text = "Duet"
     icon = "/avatar.png"
     iconHeight = 30
-
-  [params.homeInfoParams]
-    Title = ""
-    Content = ""
 
   [[params.socialIcons]]
     name = "x"
