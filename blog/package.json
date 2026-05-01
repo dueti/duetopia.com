@@ -1,0 +1,12 @@
+{
+  "name": "blog-duetopia-com",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "hugo && node scripts/encrypt-posts.mjs",
+    "encrypt": "node scripts/encrypt-posts.mjs"
+  },
+  "devDependencies": {
+    "gray-matter": "^4.0.3"
+  }
+}
