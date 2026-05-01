@@ -5,11 +5,9 @@ draft: false
 slug: "Claude"
 tags: ["Claude", "教程"]
 password: true
+searchHidden: true
 description: "本文需要密码访问"
 summary: "本文需要密码访问"
-build:
-  list: never
-  render: always
 ---
 
 推荐 Mac 电脑使用 Claude。
