@@ -77,7 +77,7 @@ function encryptHtml(plaintext, password) {
 
 function processPost(post) {
   if (!post.password) return false;
-  const htmlPath = join(PUBLIC_DIR, post.slug, 'index.html');
+  const htmlPath = join(PUBLIC_DIR, post.slug.toLowerCase(), 'index.html');
   if (!existsSync(htmlPath)) {
     console.error(`  ! ${post.slug}: ${htmlPath} 不存在，跳过（先跑 hugo？）`);
     return false;
