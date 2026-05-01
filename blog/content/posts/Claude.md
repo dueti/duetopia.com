@@ -63,7 +63,7 @@ ssh root@<你的IP> -p <端口>
 
 梯子切到搭建节点。
 
-已有 Gmail / 新 Gmail 都行，区域不要在 Claude 禁用的区域。已有的看看 Google 的地址在哪：https://policies.google.com/terms?hl=zh_CN
+已有 Gmail / 新 Gmail 都行，区域不要在 Claude 禁用的区域。已有的看看 Google 的地址在哪：[Google 服务条款适用地区](https://policies.google.com/terms?hl=zh_CN)
 
 ![](/images/posts/claude/gmail-region.png)
 
@@ -98,8 +98,8 @@ Seeker 是一台原生 Google 手机，GMS 完整能装 Google Play。
 
 如果你已经有美区 Apple ID 和 Apple 礼品卡：
 
-- 美区 Apple ID 注册：https://blog.duetopia.com/posts/chatgpt-plus-guide/
-- Apple 礼品卡官网购买：https://blog.duetopia.com/posts/apple-giftcard-guide/
+- [美区 Apple ID 注册](https://blog.duetopia.com/posts/chatgpt-plus-guide/)
+- [Apple 礼品卡官网购买](https://blog.duetopia.com/posts/apple-giftcard-guide/)
 
 不要一上来就选 200U 的订阅，先用 20U，额度够就继续用，不够再升级。
 
@@ -113,7 +113,7 @@ Seeker 是一台原生 Google 手机，GMS 完整能装 Google Play。
 
 ### 1、苹果官方网站报告问题
 
-网站地址：https://reportaproblem.apple.com/
+网站地址：[reportaproblem.apple.com](https://reportaproblem.apple.com/)
 
 因为我们是用苹果礼品卡付的钱，但是订阅期限还没到就被封号了，所以我们直接去找苹果。
 
