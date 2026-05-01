@@ -92,7 +92,7 @@ Bitget Wallet Card 注册 https://newshare.bwb.global/zh/referralLanding?inviteC
 Seeker 是一台原生 Google 手机，GMS 完整能装 Google Play。
 连 WiFi（梯子接上，下载 Clash 并配置），登第四步那个 Gmail，Google Play → 订阅设置，把 Bitget 的卡加进去。
 
-地址可以用地址生成器：https://www.meiguodizhi.com/usa-address/alaska ，阿拉斯加税少。只要 CVV、卡号、姓名正确就行。
+地址可以用[地址生成器](https://www.meiguodizhi.com/usa-address/alaska)，阿拉斯加税少。只要 CVV、卡号、姓名正确就行。
 
 然后 Claude 网页或者 App 里选 Pro，$20/月，付款的时候选 Google Pay。
 
