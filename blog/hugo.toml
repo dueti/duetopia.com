@@ -33,10 +33,6 @@ theme = "PaperMod"
     name = "x"
     url = "https://x.com/Duetopid"
 
-  [[params.socialIcons]]
-    name = "wechat"
-    url = "#wechat"
-
 [menu]
   [[menu.main]]
     name = "文章"
