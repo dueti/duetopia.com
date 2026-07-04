@@ -63,15 +63,3 @@ description: "手把手教你注册一个香港区 Apple ID，用大陆手机号
 ## 切换回主账号
 
 下载完需要的 App 后，在 App Store 内点击右上角头像 → 滑到底部退出登录。这样只退出商店账号，不影响 iCloud 数据。
-
----
-
-## 原始教程 PDF
-
-以下是原始教程截图，供参考：
-
-![第 1 页](/images/apple-hk-id/page-1.png)
-
-![第 2 页](/images/apple-hk-id/page-2.png)
-
-![第 3 页](/images/apple-hk-id/page-3.png)
