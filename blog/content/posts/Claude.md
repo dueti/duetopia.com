@@ -1,5 +1,5 @@
 ---
-title: "从 0 到 1 拥有 Claude（2026 版）"
+title: "Claude 从 0 到归 0 不完全指南"
 date: 2026-05-01
 draft: false
 slug: "Claude"
