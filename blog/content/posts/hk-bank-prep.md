@@ -48,12 +48,12 @@ description: "一份赴港开银行账户的完整 checklist，从证件签注�
 
 → 详细步骤见 **[Apple ID 港区商店注册教程](/posts/apple-hk-id/)**
 
-### 5. 下载必备 App
+### 5. 下载必备 App（苹果用港区商店下载）
 
 | 银行 | 下载链接 |
 |---|---|
 | ZA Bank（众安银行） | [bank.za.group/en/app-download](https://bank.za.group/en/app-download) |
-| 平安数字银行（PAO Bank） | iOS 在港区 App Store 搜「平安数字银行」／[Android APK 直链](https://www.pingandb.com/asset/sdk/PingAnDB_retail_789_android_appstore.apk) |
+| 平安数字银行（PAO Bank） | [Android APK 直链](https://www.pingandb.com/asset/sdk/PingAnDB_retail_789_android_appstore.apk) |
 | Airstar Bank（象象银行 / 原天星） | [elebank.com/zh-cn/signup-now](https://www.elebank.com/zh-cn/signup-now) |
 | WeLab Bank | [welab.bank/en/feature/download](https://www.welab.bank/en/feature/download/) |
 | 蚂蚁银行（香港） | 扫下方二维码 |
