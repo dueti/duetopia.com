@@ -85,8 +85,6 @@ description: "一份赴港开银行账户的完整 checklist，从证件签注�
 
 ### 2. 开户顺序建议
 
-按下面的顺序来，先把价值最高的开掉：
-
 1. **[众安银行（ZA Bank）](/posts/za-bank-guide/)** — 流程最完整，开**投资账户 + 基金服务**，开户填邀请码 **P78F29** 联系我领回赠
 2. **[平安数字银行](/posts/pingan-digital-bank-guide/)** — 开通投资账户后可套利约 800 HKD（有时效）
 3. **[象象银行（Airstar Bank）](/posts/airstar-bank-guide/)** — 5 分钟极速开户，小米旗下，无最低结余、无管理费
