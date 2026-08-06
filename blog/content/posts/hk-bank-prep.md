@@ -53,7 +53,7 @@ description: "一份赴港开银行账户的完整 checklist，从证件签注�
 | 银行 | 下载链接 |
 |---|---|
 | ZA Bank（众安银行） | [bank.za.group/en/app-download](https://bank.za.group/en/app-download) |
-| 平安数字银行（PAO Bank） | [Android APK 直链](https://www.pingandb.com/asset/sdk/PingAnDB_retail_789_android_appstore.apk) |
+| 平安数字银行 | [Android APK 直链](https://www.pingandb.com/asset/sdk/PingAnDB_retail_789_android_appstore.apk) |
 | Airstar Bank（象象银行 / 原天星） | [elebank.com/zh-cn/signup-now](https://www.elebank.com/zh-cn/signup-now) |
 | WeLab Bank | [welab.bank/en/feature/download](https://www.welab.bank/en/feature/download/) |
 | 蚂蚁银行（香港） | 扫下方二维码 |
@@ -82,6 +82,8 @@ description: "一份赴港开银行账户的完整 checklist，从证件签注�
 人到了香港却无法接打电话或上网：
 
 打开 **设置 / 設定** → **蜂窝网络 / 行動服務** → 选择需使用的 SIM 卡 → **网络选择 / 網路選擇** → 关掉**自动**后，手动选择网络运营商，一般选 **数码通 SmarTone**。如无信号，再换其他运营商尝试。
+
+可以去麦当劳等地连接 Wi-Fi 开户，买点吃的休息一下。
 
 ### 2. 开户顺序建议
 
