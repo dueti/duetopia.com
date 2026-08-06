@@ -53,8 +53,9 @@ description: "一份赴港开银行账户的完整 checklist，从证件签注�
 | 银行 | 下载链接 |
 |---|---|
 | ZA Bank（众安银行） | [bank.za.group/en/app-download](https://bank.za.group/en/app-download) |
-| WeLab Bank | [welab.bank/en/feature/download](https://www.welab.bank/en/feature/download/) |
+| 平安数字银行（PAO Bank） | iOS 在港区 App Store 搜「平安数字银行」／[Android APK 直链](https://www.pingandb.com/asset/sdk/PingAnDB_retail_789_android_appstore.apk) |
 | Airstar Bank（象象银行 / 原天星） | [elebank.com/zh-cn/signup-now](https://www.elebank.com/zh-cn/signup-now) |
+| WeLab Bank | [welab.bank/en/feature/download](https://www.welab.bank/en/feature/download/) |
 | 蚂蚁银行（香港） | 扫下方二维码 |
 
 <img src="/images/hk-bank-prep/03-antbank-app.png" alt="蚂蚁银行 App 二维码" style="max-width:35%">
@@ -84,14 +85,15 @@ description: "一份赴港开银行账户的完整 checklist，从证件签注�
 
 ### 2. 开户顺序建议
 
-按「容易过 → 流程长」的顺序来，先把最简单的开掉再啃硬骨头：
+按下面的顺序来，先把价值最高的开掉：
 
-1. **[象象银行（Airstar Bank）](/posts/airstar-bank-guide/)** — 5 分钟极速开户，小米旗下，无最低结余、无管理费
-2. **[众安银行（ZA Bank）](/posts/za-bank-guide/)** — 流程最完整，开**投资账户 + 基金服务**，开户填邀请码 **P78F29** 联系我领回赠
-3. **WeLab Bank** — 港人常用的另一家虚拟银行
-4. **蚂蚁银行（香港）** — 蚂蚁集团出海产品
+1. **[众安银行（ZA Bank）](/posts/za-bank-guide/)** — 流程最完整，开**投资账户 + 基金服务**，开户填邀请码 **P78F29** 联系我领回赠
+2. **[平安数字银行](/posts/pingan-digital-bank-guide/)** — 开通投资账户后可套利约 800 HKD（有时效）
+3. **[象象银行（Airstar Bank）](/posts/airstar-bank-guide/)** — 5 分钟极速开户，小米旗下，无最低结余、无管理费
+4. **WeLab Bank** — 港人常用的另一家虚拟银行
+5. **蚂蚁银行（香港）** — 蚂蚁集团出海产品
 
-> 如果只想开一两家，优先 **ZA Bank + 象象银行**，覆盖大部分港区收付款 / 投资场景。
+> 开户完成后卡里及时充值余额，**1 HKD 即可**，防止被冻结关户。
 
 ### 3. 64 岁以上老人填写注意
 
