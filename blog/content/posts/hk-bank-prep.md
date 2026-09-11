@@ -54,7 +54,7 @@ description: "一份赴港开银行账户的完整 checklist，从证件签注�
 |---|---|
 | ZA Bank（众安银行） | [bank.za.group/en/app-download](https://bank.za.group/en/app-download) |
 | 平安数字银行 | [Android APK 直链](https://www.pingandb.com/asset/sdk/PingAnDB_retail_789_android_appstore.apk) |
-| Airstar Bank（象象银行 / 原天星） | [elebank.com/zh-cn/signup-now](https://www.elebank.com/zh-cn/signup-now) |
+| 大象银行 EleBank（原天星 Airstar） | [elebank.com/zh-cn/signup-now](https://www.elebank.com/zh-cn/signup-now) |
 | WeLab Bank | [welab.bank/en/feature/download](https://www.welab.bank/en/feature/download/) |
 | 蚂蚁银行（香港） | 扫下方二维码 |
 
@@ -87,9 +87,11 @@ description: "一份赴港开银行账户的完整 checklist，从证件签注�
 
 ### 2. 开户顺序建议
 
+点击银行名称查看对应的开户流程教程。
+
 1. **[众安银行（ZA Bank）](/posts/za-bank-guide/)** — 流程最完整，开**投资账户 + 基金服务**，开户填邀请码 **P78F29** 联系我领回赠
 2. **[平安数字银行](/posts/pingan-digital-bank-guide/)** — 开通投资账户后可套利约 800 HKD（有时效）
-3. **[象象银行（Airstar Bank）](/posts/airstar-bank-guide/)** — 5 分钟极速开户，小米旗下，无最低结余、无管理费
+3. **[大象银行（EleBank，原天星）](/posts/airstar-bank-guide/)** — 5 分钟极速开户，小米旗下，无最低结余、无管理费，需 **10 万资产证明**
 4. **WeLab Bank** — 港人常用的另一家虚拟银行
 5. **蚂蚁银行（香港）** — 蚂蚁集团出海产品
 
@@ -123,4 +125,4 @@ description: "一份赴港开银行账户的完整 checklist，从证件签注�
 - [Apple ID 港区商店注册教程](/posts/apple-hk-id/)
 - [出入境记录查询与下载教程](/posts/exit-entry-record/)
 - [众安银行（ZA Bank）线上开户教程](/posts/za-bank-guide/)
-- [象象银行（原天星银行）线上开户教程](/posts/airstar-bank-guide/)
+- [大象银行（EleBank，原天星银行）线上开户教程](/posts/airstar-bank-guide/)
