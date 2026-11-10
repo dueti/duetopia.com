@@ -3,7 +3,7 @@ title: "Apple ID 港区商店注册教程"
 date: 2026-04-28T11:00:00+08:00
 draft: false
 tags: ["Apple", "教程"]
-description: "手把手教你注册一个香港区 Apple ID，用大陆手机号即可完成，无需付款方式。"
+description: "用大陆手机号即可完成，无需付款方式。"
 ---
 
 想下载港区 App Store 的应用（比如某些国区没上架的 App），需要一个香港区的 Apple ID。整个流程只需要一个大陆手机号和一个没注册过 Apple ID 的邮箱。
